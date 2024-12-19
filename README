@@ -1,0 +1,10 @@
+Cara kerja aplikasi Sistem Peringatan Dini Serangan DoS ini dirancang untuk memantau lalu lintas jaringan secara real-time dan mendeteksi potensi serangan DoS (Denial of Service).
+ Berikut penjelasan cara kerjanya:
+Aplikasi ini mengumpulkan data trafik jaringan, mencatat jumlah permintaan yang diterima dalam periode waktu tertentu, dan menampilkan informasi tersebut di dalam log trafik. Data yang ditampilkan meliputi waktu, jumlah permintaan, total permintaan, dan rata-rata permintaan per menit. Berdasarkan data ini, aplikasi dapat memberikan peringatan
+jika pola trafik mencurigakan terdeteksi, seperti lonjakan tiba-tiba jumlah permintaan.
+Perbedaan jumlah permintaan yang tercatat di log bisa terjadi karena aplikasi menangkap data secara langsung dari sumber trafik jaringan (misalnya server web). Variasi ini dipengaruhi oleh faktor-faktor seperti:
+1. Volume Trafik Asli: Permintaan dari pengguna asli bisa berbeda-beda tergantung aktivitas, seperti banyaknya pengguna yang mengakses aplikasi dalam waktu bersamaan atau menjalankan skrip otomatis.
+2. Serangan atau Aktivitas Bot: Jika ada serangan atau aktivitas bot, jumlah permintaan bisa melonjak drastis dalam waktu singkat.
+3. Interval Pengambilan Data: Aplikasi mengumpulkan data pada interval waktu tertentu. Jika trafik masuk lebih cepat dari interval ini, beberapa permintaan mungkin terakumulasi atau tidak tercatat secara detail.
+4. Filtering atau Pemrosesan Data: Beberapa permintaan bisa difilter atau dikelompokkan oleh server untuk memastikan hanya data yang relevan yang tercatat dalam log trafik.
+Secara keseluruhan, aplikasi ini bekerja sebagai alat pemantauan dan analisis. Jika ditemukan pola trafik yang tidak biasa, seperti peningkatan jumlah permintaan yang signifikan, sistem dapat digunakan untuk memberikan notifikasi atau analisis lebih lanjut terkait potensi ancaman keamanan.

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistem Peringatan Dini Serangan DoS</title>
+    <title>ShieldNet</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
-        <h1>Sistem Peringatan Dini Serangan DoS</h1>
+        <h1>ShieldNet</h1>
     </header>
 
     <main>
@@ -18,6 +18,7 @@
             <canvas id="trafficChart"></canvas>
             <p id="traffic-data">Trafik Saat Ini: 0 permintaan per menit</p>
             <button id="simulate-traffic">Simulasikan Trafik</button>
+            <button id="reset-traffic">Reset Trafik</button>
         </section>
 
         <section id="warning-container" class="hidden">
@@ -29,9 +30,39 @@
             <h2>Tindakan Pengurangan Risiko</h2>
             <p>Langkah: Memblokir IP yang mencurigakan atau membatasi akses.</p>
         </section>
-    </main>
 
-   
+        <section id="dread-tread-container">
+            <h2>Analisis DREAD dan TREAD</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Nilai</th>
+                    </tr>
+                </thead>
+                <tbody id="dread-scores">
+                    <!-- Nilai DREAD akan diisi oleh JavaScript -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Total Risiko (DREAD)</td>
+                        <td id="dread-total">0</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tread-status">
+                    <!-- Status TREAD akan diisi oleh JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>

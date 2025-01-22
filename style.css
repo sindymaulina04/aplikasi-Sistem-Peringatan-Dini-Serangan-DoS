@@ -88,3 +88,62 @@ canvas {
         width: 100%;
     }
 }
+
+/* Styles for DREAD and TREAD Sections */
+#dread-container, #tread-container {
+    padding: 20px;
+    margin: 10px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgb(59, 39, 9);
+}
+
+.dread-tread-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+.dread-tread-table th,
+.dread-tread-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.dread-tread-table th {
+    background-color: #623d13;
+    color: white;
+    font-weight: bold;
+}
+
+.dread-tread-table tfoot td {
+    font-weight: bold;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.total-risk {
+    font-size: 18px;
+    font-weight: bold;
+    color: #623d13;
+    margin-top: 10px;
+}
+
+/* Highlight for Risk Levels */
+.low-risk {
+    color: #2c7a2c;
+    font-weight: bold;
+}
+
+.medium-risk {
+    color: #d69e2e;
+    font-weight: bold;
+}
+
+.high-risk {
+    color: #c53030;
+    font-weight: bold;
+}
+
+
